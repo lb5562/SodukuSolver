@@ -50,3 +50,28 @@ def stackImages(scale, imgArray):
     return ver
 
 
+def biggestContour(contours):
+    biggest = np.array([])
+    max_area = 0
+    for i in contours:
+        area=cv2.contourArea(i)
+        if area>50:
+            peri = cv2.arcLength(i,True)
+            approx = cv2.approxPolyDP(i,0.02*peri,True)
+            if area>max_area and len(approx==4):
+                biggest=approx
+                max_area= area
+    return biggest,max_area
+
+def splitBoxes(img):
+    rows = np.vsplit(img,9)
+    boxes=[]
+    for r in rows:
+        cols=np.hsplit(r,9)
+        for box in cols:
+            boxes.append(box)
+    return boxes
+
+def intializePredictionModel():
+    model = load_model('Puzzles/myModel.h5')
+    return model
