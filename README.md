@@ -1,7 +1,8 @@
 # SodukuSolver
 
-Soduku Solver in python using Tensorflow and OpenCV
-Followed tutorial on https://www.google.com/url?sa=t&source=web&rct=j&url=https://m.youtube.com/watch%3Fv%3DqOXDoYUgNlU&ved=2ahUKEwi_-LK7-o35AhXYEFkFHd0PCloQxa8BegQICxAF&usg=AOvVaw1O5Ev3bpb-i6MwXtqrUtfh
-
-Key Notes:
+Soduku Solver in python using Tensorflow  and OpenCv
+Guided by: https://tinyurl.com/5k7mzzak
+Key notes
   Some numbers on Certain pictures do are not read correctly
+  Create soduku
+  Make front end page to display and show.
